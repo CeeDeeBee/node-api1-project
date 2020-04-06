@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const shortid = require("shortid");
 
 const server = express();
 
 server.use(express.json());
+server.use(cors());
 
 let users = [
 	{
@@ -94,7 +96,6 @@ server.put("/api/users/:id", (req, res) => {
 			users = users.map((user) => {
 				return user.id === id ? { ...body, id } : user;
 			});
-			console.log(users);
 
 			const newUser = users.find((user) => user.id === id);
 			newUser
