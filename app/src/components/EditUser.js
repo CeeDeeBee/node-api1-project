@@ -29,7 +29,7 @@ const EditUser = ({ user, users, setUsers, setIsEditing }) => {
 	};
 
 	return (
-		<div className="add-user">
+		<div className="user-form">
 			<form onSubmit={handleSubmit}>
 				<input
 					type="text"
@@ -45,7 +45,10 @@ const EditUser = ({ user, users, setUsers, setIsEditing }) => {
 					onChange={handleChange}
 					value={inputValues.bio}
 				/>
-				<button type="submit">Submit</button>
+				<div className="form-buttons">
+					<button type="submit">Save Changes</button>
+					<button onClick={() => setIsEditing(false)}>Cancel</button>
+				</div>
 			</form>
 		</div>
 	);

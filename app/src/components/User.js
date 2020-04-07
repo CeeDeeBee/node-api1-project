@@ -11,8 +11,13 @@ const User = ({ user, handleDelete, users, setUsers }) => {
 		<div className="user">
 			{!isEditing && (
 				<div className="user-content">
-					<FontAwesomeIcon icon={faPen} onClick={() => setIsEditing(true)} />
 					<FontAwesomeIcon
+						className="pencil"
+						icon={faPen}
+						onClick={() => setIsEditing(true)}
+					/>
+					<FontAwesomeIcon
+						className="x"
 						icon={faTimes}
 						onClick={() => handleDelete(user.id)}
 					/>

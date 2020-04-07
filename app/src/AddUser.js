@@ -23,11 +23,11 @@ const AddUser = ({ handleShowAdd, users, setUsers }) => {
 				setUsers([...users, res.data]);
 				handleShowAdd();
 			})
-			.catch((err) => console.log(err.message));
+			.catch((err) => console.log(err));
 	};
 
 	return (
-		<div className="add-user">
+		<div className="user-form">
 			<form onSubmit={handleSubmit}>
 				<input
 					type="text"
@@ -43,7 +43,10 @@ const AddUser = ({ handleShowAdd, users, setUsers }) => {
 					onChange={handleChange}
 					value={inputValues.bio}
 				/>
-				<button type="submit">Submit</button>
+				<div className="form-buttons">
+					<button type="submit">Add User</button>
+					<button onClick={handleShowAdd}>Cancel</button>
+				</div>
 			</form>
 		</div>
 	);

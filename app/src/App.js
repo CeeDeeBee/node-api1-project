@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.scss";
 
 import UserList from "./components/UserList";
 import AddUser from "./AddUser";
@@ -14,7 +14,11 @@ function App() {
 
 	return (
 		<div className="App">
-			{!showAddUser && <button onClick={handleShowAdd}>Add User</button>}
+			{!showAddUser && (
+				<button className="add-btn" onClick={handleShowAdd}>
+					Add User
+				</button>
+			)}
 			{showAddUser && (
 				<AddUser
 					handleShowAdd={handleShowAdd}

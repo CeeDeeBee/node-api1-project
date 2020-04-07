@@ -8,14 +8,14 @@ const UserList = ({ users, setUsers }) => {
 		axios
 			.get("http://localhost:5000/api/users")
 			.then((res) => setUsers(res.data))
-			.catch((err) => console.log(err));
+			.catch((err) => console.log(err.response.message));
 	}, [setUsers]);
 
 	const handleDelete = (id) => {
 		axios
 			.delete(`http://localhost:5000/api/users/${id}`)
 			.then((res) => setUsers(users.filter((user) => user.id !== res.data.id)))
-			.catch((err) => console.log(err.message));
+			.catch((err) => console.log(err.response.message));
 	};
 
 	return (
