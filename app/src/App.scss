@@ -8,6 +8,10 @@
 	border: 2px solid lightgray;
 	border-radius: 10px;
 	padding: 1%;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .user-form {
@@ -33,6 +37,10 @@
 				width: 47%;
 				font-size: 1rem;
 				border: 1px solid lightgray;
+
+				&:hover {
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -51,14 +59,26 @@
 
 		.x {
 			position: absolute;
-			top: 7%;
-			right: 5%;
+			top: 12px;
+			right: 14px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		h2 {
+			display: inline;
 		}
 
 		.pencil {
 			position: absolute;
-			top: 7%;
-			right: 10%;
+			top: 12px;
+			left: 14px;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }

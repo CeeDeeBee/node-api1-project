@@ -18,7 +18,10 @@ const EditUser = ({ user, users, setUsers, setIsEditing }) => {
 		e.preventDefault();
 
 		axios
-			.put(`http://localhost:5000/api/users/${user.id}`, inputValues)
+			.put(
+				`https://node-user-app.herokuapp.com/api/users/${user.id}`,
+				inputValues
+			)
 			.then((res) => {
 				setUsers(
 					users.map((user) => (user.id === res.data.id ? res.data : user))

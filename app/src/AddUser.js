@@ -18,7 +18,7 @@ const AddUser = ({ handleShowAdd, users, setUsers }) => {
 		e.preventDefault();
 
 		axios
-			.post("http://localhost:5000/api/users", inputValues)
+			.post("https://node-user-app.herokuapp.com/api/users", inputValues)
 			.then((res) => {
 				setUsers([...users, res.data]);
 				handleShowAdd();
