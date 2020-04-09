@@ -17,7 +17,8 @@ let users = [
 ];
 
 server.get("/", (req, res) => {
-	res.json({ api: "running..." });
+	const message = process.env.MSG;
+	res.json({ api: "running...", message });
 });
 
 server.get("/api/users", (req, res) => {
