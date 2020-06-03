@@ -1,0 +1,84 @@
+.App {
+	text-align: center;
+}
+
+.add-btn {
+	margin-top: 2%;
+	font-size: 1rem;
+	border: 2px solid lightgray;
+	border-radius: 10px;
+	padding: 1%;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.user-form {
+	margin-top: 2%;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+		margin: 0 auto;
+
+		input {
+			margin: 2% 0;
+			font-size: 1rem;
+			padding: 2%;
+		}
+
+		.form-buttons {
+			display: flex;
+			justify-content: space-between;
+
+			button {
+				width: 47%;
+				font-size: 1rem;
+				border: 1px solid lightgray;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.user-list {
+	width: 50%;
+	margin: 0 auto;
+
+	.user {
+		position: relative;
+		border: 2px solid black;
+		border-radius: 10px;
+		padding: 2%;
+		margin: 4% 0;
+
+		.x {
+			position: absolute;
+			top: 12px;
+			right: 14px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		h2 {
+			display: inline;
+		}
+
+		.pencil {
+			position: absolute;
+			top: 12px;
+			left: 14px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
